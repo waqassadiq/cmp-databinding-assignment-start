@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './game-control/odd/odd.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameControlComponent
+    GameControlComponent,
+    OddComponent
   ],
   imports: [
     BrowserModule,
