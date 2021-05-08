@@ -8,10 +8,10 @@
         </div>
         <div style="background-color: black; overflow: auto; border-radius: 1em; animation: alternate;" class="row">
             <div *ngIf="randomValue%2===0">
-                <app-even></app-even>
+                <app-even [randomFromParentForEven]="randomValue"></app-even>
             </div>
             <div *ngIf="randomValue%2!=0">
-                <app-odd></app-odd>
+                <app-odd [randomFromParentForOdd] = "randomValue"></app-odd>
             </div>
         </div>
     </div>

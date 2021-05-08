@@ -18,7 +18,7 @@ export class GameControlComponent implements OnInit {
 //  @Output() incrementValue = new EventEmitter();
 
   randomValue: number;
-   randomArray =  [];
+  randomArray =  [];
 
   constructor() { 
     this.randomValue = 100;
