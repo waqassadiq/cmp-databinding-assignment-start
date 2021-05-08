@@ -15,28 +15,36 @@ export class GameControlComponent implements OnInit {
 
    myVar : any;
 
-  @Output() incrementValue = new EventEmitter<{myValue: number}>();
+//  @Output() incrementValue = new EventEmitter();
 
-  constructor() { }
+  randomValue: number;
+   randomArray =  [];
+
+  constructor() { 
+    this.randomValue = 100;
+  }
 
   ngOnInit(): void {
   }
 
   processIncrementValue(){
-    
-      var randomNo = Math.floor((Math.random()*100)+1);
-      console.log("generating random number: " + randomNo);
-    //  this.incrementValue.emit(randomNo);
-
+    this.randomValue = Math.floor((Math.random()*100)+1);
+    this.randomArray.push(this.randomValue);
+    console.log("generating random number: " + this.randomValue);
   }
 
   stop(){
+    console.log("generating random number: stop " + this.randomValue);
     clearInterval(this.myVar);
 
   }
 
   start(){
-    this.myVar = setInterval(this.processIncrementValue, 1000);
+    console.log("generating random number: start " + this.randomValue);
+
+    this.myVar = setInterval(()=>{this.processIncrementValue()}, 1000);
+    // following code won't be showing valye in html component
+    //this.myVar = setInterval(this.processIncrementValue, 1000);
   }
 
 }

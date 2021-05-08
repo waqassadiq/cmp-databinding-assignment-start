@@ -2,7 +2,28 @@
     <div class="row">
         <button type="button" class="btn btn-primary" (click)="start()">Start</button>
         <button type="button" class="btn btn-danger" (click)="stop()">Stop</button>
-
+        <hr>
+        <div class="row">
+            <p>random value = {{randomValue}};</p>
+        </div>
+        <div style="background-color: black; overflow: auto; border-radius: 1em; animation: alternate;" class="row">
+            <div *ngIf="randomValue%2===0">
+                <app-even></app-even>
+            </div>
+            <div *ngIf="randomValue%2!=0">
+                <app-odd></app-odd>
+            </div>
+        </div>
     </div>
-    
+    <hr>
+
+    <!-- printing the continues pabesl of even and odd-->
+    <div class="row" *ngFor="let abc of randomArray">
+        <div *ngIf="abc%2===0">
+            <app-even></app-even>
+        </div>
+        <div *ngIf="abc%2!=0">
+            <app-odd></app-odd>
+        </div>
+    </div>
 </div>
