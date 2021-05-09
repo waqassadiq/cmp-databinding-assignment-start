@@ -16,7 +16,11 @@
         </div>
     </div>
     <hr>
-
+    <div class="row">
+    <button class="btn btn-primary" (click)="onStartGame2()">State Game 2</button>
+    <button class="btn btn-danger" (click)="onPauseGame2()">Stop Game 2</button>
+</div>
+    <hr>
     <!-- printing the continues pabesl of even and odd-->
     <div class="row" *ngFor="let abc of randomArray">
         <div *ngIf="abc%2===0">

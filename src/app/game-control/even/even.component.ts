@@ -9,6 +9,8 @@ export class EvenComponent implements OnInit {
 
   @Input() randomFromParentForEven: number;
 
+  @Input() number: number;
+
   constructor() { }
 
   ngOnInit(): void {

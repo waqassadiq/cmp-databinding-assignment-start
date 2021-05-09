@@ -13,10 +13,13 @@ import {
 })
 export class GameControlComponent implements OnInit {
 
-   myVar : any;
+  // game 2 using event emitter
+  @Output() intervalFired = new EventEmitter<number>();
+  interval;
+  lastNumber = 0;
 
-//  @Output() incrementValue = new EventEmitter();
-
+  ////
+  myVar : any;
   randomValue: number;
   randomArray =  [];
 
@@ -47,4 +50,14 @@ export class GameControlComponent implements OnInit {
     //this.myVar = setInterval(this.processIncrementValue, 1000);
   }
 
+  onStartGame2(){
+    this.interval = setInterval(()=>{
+      this.intervalFired.emit(this.lastNumber + 1);
+      this.lastNumber++;
+    }, 1000);
+  }
+
+  onPauseGame2(){
+    clearInterval(this.interval);
+  }
 }
