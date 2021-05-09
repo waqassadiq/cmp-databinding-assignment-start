@@ -3,4 +3,6 @@ p{
     padding: 2em;
     border-color: rgb(54, 109, 9);
     border-width: 1in;
+    font-weight: bold;
+    font-size: large;
   }

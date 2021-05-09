@@ -1,4 +1,4 @@
 <div class="row">
     <p class="text-primary">Even {{randomFromParentForEven}}</p>
-    <p class="text-warning">Game2: Even {{number}}</p>
+    <p class="text-warning" *ngIf="number">Game2: Even {{number}}</p>
 </div>

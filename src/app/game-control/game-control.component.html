@@ -22,12 +22,16 @@
 </div>
     <hr>
     <!-- printing the continues pabesl of even and odd-->
-    <div class="row" *ngFor="let abc of randomArray">
+    <div class="row">
+        <h1>Game: Random</h1>
+           <div class="col-xs-12s" *ngFor="let abc of randomArray">
         <div *ngIf="abc%2===0">
             <app-even></app-even>
         </div>
         <div *ngIf="abc%2!=0">
             <app-odd></app-odd>
         </div>
+    </div>
+ 
     </div>
 </div>
